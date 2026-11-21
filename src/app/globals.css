@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Pure white & soft gray palette */
+    --background: 210 20% 98%;      /* #F8F9FA */
+    --foreground: 222 47% 11%;      /* #0F172A */
+
+    --surface: 0 0% 100%;           /* #FFFFFF */
+    --surface-subtle: 210 20% 97%;   /* #F1F4F8 */
+    --surface-muted: 210 16% 93%;    /* #E8ECF2 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Restrained Apple / Linear blue */
+    --primary: 221 83% 53%;         /* #2563EB */
+    --primary-foreground: 210 40% 98%;
+    --primary-hover: 224 76% 48%;   /* #1D4ED8 */
+
+    --secondary: 210 20% 96%;       /* #F1F5F9 */
+    --secondary-foreground: 222 47% 15%;
+
+    --muted: 210 20% 96%;           /* #F1F5F9 */
+    --muted-foreground: 215 16% 47%;/* #64748B */
+
+    --accent: 210 24% 94%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;          /* #E2E8F0 */
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+
+    /* Status badge design tokens */
+    --status-open-bg: 214 95% 95%;
+    --status-open-text: 221 83% 45%;
+    --status-open-border: 214 80% 88%;
+
+    --status-progress-bg: 45 93% 94%;
+    --status-progress-text: 35 92% 33%;
+    --status-progress-border: 45 86% 82%;
+
+    --status-resolved-bg: 142 76% 95%;
+    --status-resolved-text: 142 71% 29%;
+    --status-resolved-border: 142 60% 85%;
+
+    --status-urgent-bg: 0 86% 96%;
+    --status-urgent-text: 0 72% 44%;
+    --status-urgent-border: 0 70% 88%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --surface: 222 47% 9%;
+    --surface-subtle: 222 40% 12%;
+    --surface-muted: 222 35% 15%;
+
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    --primary-hover: 217 91% 68%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 224 76% 48%;
+  }
+}
+
+@layer base {
+  body {
+    background-color: #f8f9fa;
+    color: #0f172a;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Tabular numbers for financial and system metrics */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
